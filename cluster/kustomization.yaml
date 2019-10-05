@@ -1,3 +1,5 @@
 bases:
   - ./common/
   - ./team1/
+  - ./tests/
+  - ./bbdpoc-eks-flux-team/

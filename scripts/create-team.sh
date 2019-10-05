@@ -13,10 +13,8 @@ mkdir -p ${TEAM_DIR}
 
 cp -r "${REPO_ROOT}/cluster/${TEMPLATE}/." ${TEAM_DIR}
 
-for f in "${TEAM_DIR}*.yaml"
-do
- sed -i '' "s/$TEMPLATE/$TEAM_NAME/g" ${f}
-done
+
+find ${TEAM_DIR} -type f -exec sed -i "s/$TEMPLATE/$TEAM_NAME/g" {} \;
 
 echo "${TEAM_NAME} created at ${TEAM_DIR}"
 echo "  - ./${TEAM_NAME}/" >> "${REPO_ROOT}/cluster/kustomization.yaml"
