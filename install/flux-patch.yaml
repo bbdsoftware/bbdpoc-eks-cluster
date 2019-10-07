@@ -16,4 +16,4 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --git-branch=master
             - --git-path=cluster
-            - --git-url=git@github.com:github.com:bbdsoftware/bbdpoc-eks-cluster.git
+            - --git-url=git@github.com:bbdsoftware/bbdpoc-eks-cluster.git
