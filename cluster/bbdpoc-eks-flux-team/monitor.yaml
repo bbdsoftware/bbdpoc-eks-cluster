@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: prometheus
+----
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+spec:
+  serviceAccountName: prometheus
+  serviceMonitorSelector:
+    matchLabels:
+      team: bbdpoc-eks-flux-team
+  resources:
+    requests:
+      memory: 400Mi
+  enableAdminAPI: false
+
+
+
+
+
+
